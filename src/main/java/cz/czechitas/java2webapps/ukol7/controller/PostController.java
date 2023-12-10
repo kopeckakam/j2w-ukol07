@@ -19,8 +19,8 @@ public class PostController {
     }
 
     @GetMapping("/")
-    public ModelAndView seznamPostu(Pageable pageable) {
-        return new ModelAndView("postList").addObject("posts", postService.seznamPostu(pageable));
+    public ModelAndView list(Pageable pageable) {
+        return new ModelAndView("postList").addObject("posts", postService.list(pageable));
     }
 
 

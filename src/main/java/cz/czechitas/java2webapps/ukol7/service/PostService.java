@@ -18,7 +18,7 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public Page<Post> seznamPostu(Pageable pageable) {
+    public Page<Post> list(Pageable pageable) {
         return postRepository.findAllByOrderByPublishedDesc(PageRequest.of(0, 20), pageable);
     }
 
